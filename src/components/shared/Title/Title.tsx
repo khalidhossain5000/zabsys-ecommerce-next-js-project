@@ -18,11 +18,11 @@ const Title = ({
     <div className="container relative z-600 mx-auto px-4">
       <h2
         className={twMerge(
-          "font-manrope text-3xl font-semibold leading-tight tracking-tight sm:text-4xl lg:text-5xl xl:text-6xl",
+          "font-lora text-3xl font-semibold leading-tight tracking-tight sm:text-4xl lg:text-5xl xl:text-6xl",
           className
         )}
       >
-        <span className="bg-linear-to-r from-accent via-teal-900 to-teal-400 bg-clip-text text-transparent dark:to-text-primary">
+        <span className="bg-linear-to-r from-accent via-teal-900 to-teal-400 bg-clip-text text-transparent dark:to-text-primary font-inter">
           {children}
         </span>
       </h2>
