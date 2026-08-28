@@ -1,4 +1,6 @@
-export const getAllProductsData = async () => {
+import { IProduct } from "@/Types/types"
+
+export const getAllProductsData = async (): Promise<IProduct[]> => {
     const res = await fetch("https://api.restful-api.dev/objects", {
         cache: "force-cache",
         next: {
@@ -11,3 +13,4 @@ export const getAllProductsData = async () => {
 
     return result
 }
+
