@@ -16,7 +16,7 @@ const Products = async() => {
 
             {/* product card */}
             <div>
-
+            
             </div>
         </section>
     );
