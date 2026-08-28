@@ -15,14 +15,14 @@ const Title = ({
   subTitleClass,
 }: ITitleProps) => {
   return (
-    <div className=" relative z-600  px-4">
+    <div className=" relative z-50  px-4">
       <h2
         className={twMerge(
-          "font-lora text-3xl font-semibold leading-tight tracking-tight sm:text-4xl lg:text-5xl xl:text-6xl",
+          "font-lora text-xl md:text-2xl lg:text-3xl md:font-bold font-semibold leading-tight tracking-tight text-center lg:text-left",
           className
         )}
       >
-        <span className="bg-linear-to-r from-accent via-teal-900 to-teal-400 bg-clip-text text-transparent dark:to-text-primary font-inter">
+        <span className="bg-linear-to-r from-primary via-primary-hover to-teal-400 bg-clip-text text-transparent">
           {children}
         </span>
       </h2>
@@ -30,7 +30,7 @@ const Title = ({
       {subTitle && (
         <p
           className={twMerge(
-            "text-sm leading-relaxed text-text-secondary sm:text-xl lg:mx-0",
+            "text-sm text-center lg:text-left pt-2 font-inter leading-relaxed text-text-secondary sm:text-xl lg:mx-0 bg-linear-to-r from-accent via-primary to-teal-800 bg-clip-text text-transparent",
             subTitleClass
           )}
         >

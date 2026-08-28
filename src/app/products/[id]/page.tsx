@@ -4,20 +4,22 @@ import { getProductDetails } from "@/lib/api";
 import { Suspense } from "react";
 
 interface IParamsProps {
-  params: Promise<{ id: string }>;
+    params: Promise<{ id: string }>;
 }
 const ProductsDetailsPage = async ({ params }: IParamsProps) => {
-  const { id } = await params;
-  const productDetails = await getProductDetails(id);
+    const { id } = await params;
+    const productDetails = await getProductDetails(id);
 
-  console.log(productDetails, "this is the details");
-  return (
-    <div>
-      <Suspense fallback={<ProductDetailsSkeleton />}>
-        <ProductDetails product={productDetails} />
-      </Suspense>
-    </div>
-  );
+    console.log(productDetails, "this is the details");
+    return (
+        <div>
+            <Suspense fallback={<ProductDetailsSkeleton />}>
+                <ProductDetails product={productDetails} />
+            </Suspense>
+
+
+        </div>
+    );
 };
 
 export default ProductsDetailsPage;
