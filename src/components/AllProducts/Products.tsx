@@ -1,6 +1,9 @@
-import React from 'react';
+import { getAllProductsData } from '@/lib/api';
 
-const Products = () => {
+
+const Products = async() => {
+    const allProducts=await getAllProductsData()
+  console.log(allProducts,"this is all products")
     return (
         <section>
             
