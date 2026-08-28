@@ -15,7 +15,7 @@ const Title = ({
   subTitleClass,
 }: ITitleProps) => {
   return (
-    <div className="container relative z-600 mx-auto px-4">
+    <div className=" relative z-600  px-4">
       <h2
         className={twMerge(
           "font-lora text-3xl font-semibold leading-tight tracking-tight sm:text-4xl lg:text-5xl xl:text-6xl",
