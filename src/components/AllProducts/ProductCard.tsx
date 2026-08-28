@@ -1,6 +1,10 @@
-import React from 'react';
+import { IProduct } from "@/Types/types";
 
-const ProductCard = () => {
+interface IProductCardProps{
+    product:IProduct
+}
+const ProductCard = ({product}:IProductCardProps) => {
+
     return (
         <div>
             
