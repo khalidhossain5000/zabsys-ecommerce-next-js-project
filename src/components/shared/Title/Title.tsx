@@ -18,7 +18,7 @@ const Title = ({
     <div className=" relative z-50  px-4">
       <h2
         className={twMerge(
-          "font-lora text-xl md:text-2xl lg:text-3xl md:font-bold font-semibold leading-tight tracking-tight text-center lg:text-left",
+          "font-lora text-xl md:text-2xl lg:text-3xl md:font-bold font-semibold leading-tight tracking-tight text-center md:text-left",
           className
         )}
       >
@@ -30,7 +30,7 @@ const Title = ({
       {subTitle && (
         <p
           className={twMerge(
-            "text-sm text-center lg:text-left pt-2 font-inter leading-relaxed text-text-secondary sm:text-xl lg:mx-0 bg-linear-to-r from-accent via-primary to-teal-800 bg-clip-text text-transparent",
+            "text-sm text-center md:text-left pt-2 font-inter leading-relaxed text-text-secondary xl:text-xl lg:mx-0 bg-linear-to-r from-accent via-primary to-teal-800 bg-clip-text text-transparent",
             subTitleClass
           )}
         >
