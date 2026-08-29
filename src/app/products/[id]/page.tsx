@@ -10,7 +10,6 @@ const ProductsDetailsPage = async ({ params }: IParamsProps) => {
     const { id } = await params;
     const productDetails = await getProductDetails(id);
 
-    console.log(productDetails, "this is the details");
     return (
         <div>
             <Suspense fallback={<ProductDetailsSkeleton />}>
