@@ -12,9 +12,9 @@ const ProductDetails = ({ product }: IProductDetailsProps) => {
 
   const specs = product.data
     ? Object.entries(product.data).filter(
-      ([key]) => key.toLowerCase() !== "price"
-    )
-    : [];   //since key is diffrent in each res
+        ([key]) => key.toLowerCase() !== "price"
+      )
+    : []; //since key is diffrent in each res
 
   return (
     <section className="mx-auto max-w-6xl px-4 py-10 sm:px-6">
@@ -37,8 +37,10 @@ const ProductDetails = ({ product }: IProductDetailsProps) => {
 
           <div className="flex flex-col gap-4 p-6 sm:p-8">
             <div>
-              <Title className="px-0 text-lg md:text-xl xl:text-2xl"> {product.name}</Title>
-            
+              <Title className="px-0 text-lg md:text-xl xl:text-2xl">
+                {" "}
+                {product.name}
+              </Title>
             </div>
 
             <p className="text-xl font-bold text-center md:text-left text-foreground">
