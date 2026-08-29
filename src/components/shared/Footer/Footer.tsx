@@ -13,12 +13,12 @@ const Footer = () => {
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-primary/5 rounded-full blur-3xl" />
       </div>
 
-      <div className="relative z-10 container px-6 md:px-8 lg:px-12 xl:px-16 mx-auto py-12">
+      <div className="relative z-10 container px-6 md:px-8 lg:px-12 xl:px-16 mx-auto py-6 md:py-12">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-10 text-center">
           {/* Logo + Social */}
           <div className="flex flex-col items-center gap-5">
             <Link href="/">
-              <h1 className="text-left  bg-linear-to-r from-primary to-accent bg-clip-text text-lg lg:text-xl xl:text-2xl font-lora xl:font-bold font-semibold tracking-tight text-transparent transition-opacity hover:opacity-80">
+              <h1 className="text-left  bg-linear-to-r from-primary to-accent bg-clip-text text-2xl font-lora xl:font-bold font-semibold tracking-tight text-transparent transition-opacity hover:opacity-80">
                 E-Store
               </h1>
             </Link>
@@ -33,9 +33,9 @@ const Footer = () => {
               ].map((Icon, index) => (
                 <div
                   key={index}
-                  className="w-11 h-11 flex items-center justify-center rounded-full bg-[#00796f] text-card cursor-pointer transition-all duration-300 hover:bg-primary-hover  hover:scale-110 shadow-md hover:shadow-lg"
+                  className="w-8 lg:w-11 h-8 lg:h-11 flex items-center justify-center rounded-full bg-[#00796f] text-card cursor-pointer transition-all duration-300 hover:bg-primary-hover  hover:scale-110 shadow-md hover:shadow-lg"
                 >
-                  <Icon size={20} />
+                  <Icon className="text-lg md:text-xl" />
                 </div>
               ))}
             </div>
@@ -66,7 +66,7 @@ const Footer = () => {
       </div>
 
       {/* Copyright */}
-      <div className="relative z-10 border-t border-border py-4">
+      <div className="relative z-10 border-t border-border py-2 md:py-4">
         <p className="text-center text-lg font-medium text-foreground font-inter">
           ©2026 <span className="font-bold text-primary font-lora">EStore</span>{" "}
           All Rights Reserved
