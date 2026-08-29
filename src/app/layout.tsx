@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Inter, Lora } from "next/font/google";
 import "./globals.css";
 import NavBar from "@/components/shared/NavBar/NavBar";
+import Footer from "@/components/shared/Footer/Footer";
 
 const inter = Inter({
   variable: "--font-inter",
@@ -27,7 +28,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
       <body className="min-h-full flex flex-col">
         <NavBar/>
         {children}
-        
+        <Footer/>
         </body>
     </html>
   );
