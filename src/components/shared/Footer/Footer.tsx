@@ -4,6 +4,34 @@ import { FaFacebook, FaInstagramSquare, FaYoutube } from "react-icons/fa";
 import { FaSquareXTwitter, FaLinkedin } from "react-icons/fa6";
 
 const Footer = () => {
+  const socialLinks = [
+    {
+      icon: FaFacebook,
+      href: "https://facebook.com/",
+      label: "Facebook",
+    },
+    {
+      icon: FaSquareXTwitter,
+      href: "https://x.com/",
+      label: "X",
+    },
+    {
+      icon: FaLinkedin,
+      href: "https://linkedin.com/",
+      label: "LinkedIn",
+    },
+    {
+      icon: FaInstagramSquare,
+      href: "https://instagram.com/",
+      label: "Instagram",
+    },
+    {
+      icon: FaYoutube,
+      href: "https://youtube.com/",
+      label: "YouTube",
+    },
+  ];
+
   return (
     <footer className="relative overflow-hidden font-inter border border-border m-3 rounded-2xl shadow-xl bg-card border-t-4 border-primary">
       {/* Glow effects */}
@@ -18,25 +46,23 @@ const Footer = () => {
           {/* Logo + Social */}
           <div className="flex flex-col items-center gap-5">
             <Link href="/">
-              <h1 className="text-left  bg-linear-to-r from-primary to-accent bg-clip-text text-2xl font-lora xl:font-bold font-semibold tracking-tight text-transparent transition-opacity hover:opacity-80">
+              <h1 className="text-left bg-linear-to-r from-primary to-accent bg-clip-text text-2xl font-lora xl:font-bold font-semibold tracking-tight text-transparent transition-opacity hover:opacity-80">
                 E-Store
               </h1>
             </Link>
 
             <div className="flex gap-4">
-              {[
-                FaFacebook,
-                FaSquareXTwitter,
-                FaLinkedin,
-                FaInstagramSquare,
-                FaYoutube,
-              ].map((Icon, index) => (
-                <div
-                  key={index}
-                  className="w-8 lg:w-11 h-8 lg:h-11 flex items-center justify-center rounded-full bg-[#00796f] text-card cursor-pointer transition-all duration-300 hover:bg-primary-hover  hover:scale-110 shadow-md hover:shadow-lg"
+              {socialLinks.map(({ icon: Icon, href, label }) => (
+                <Link
+                  key={label}
+                  href={href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label={label}
+                  className="w-8 lg:w-11 h-8 lg:h-11 flex items-center justify-center rounded-full bg-[#00796f] text-card cursor-pointer transition-all duration-300 hover:bg-primary-hover hover:scale-110 shadow-md hover:shadow-lg"
                 >
                   <Icon className="text-lg md:text-xl" />
-                </div>
+                </Link>
               ))}
             </div>
           </div>
@@ -44,9 +70,11 @@ const Footer = () => {
           {/* Address */}
           <div className="text-foreground">
             <h3 className="text-2xl font-bold mb-3 font-lora">Address</h3>
+
             <p className="text-lg font-semibold text-foreground font-inter">
               742 Mirpur Road 2 House 4
             </p>
+
             <p className="text-lg font-semibold text-foreground font-inter">
               Dhaka, Bangladesh 11201
             </p>
@@ -55,9 +83,11 @@ const Footer = () => {
           {/* Contact */}
           <div className="text-foreground font-inter">
             <h3 className="text-2xl font-bold mb-3">Contact Us</h3>
+
             <p className="text-lg font-medium text-foreground">
               +8801904240999
             </p>
+
             <p className="text-lg font-medium text-foreground">
               contact@estore.com
             </p>
@@ -68,7 +98,10 @@ const Footer = () => {
       {/* Copyright */}
       <div className="relative z-10 border-t border-border py-2 md:py-4">
         <p className="text-center text-lg font-medium text-foreground font-inter">
-          ©2026 <span className="font-bold text-primary font-lora">EStore</span>{" "}
+          ©2026{" "}
+          <Link href="/" className="font-bold text-primary font-lora">
+            EStore
+          </Link>{" "}
           All Rights Reserved
         </p>
       </div>

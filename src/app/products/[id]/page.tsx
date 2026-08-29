@@ -1,6 +1,7 @@
 import ProductDetails from "@/components/ProductDetailsPage/ProductDetails";
 import ProductDetailsSkeleton from "@/components/shared/Loading/Products/ProductDetailsSkleton";
 import { getProductDetails } from "@/lib/api";
+import { notFound } from "next/navigation";
 import { Suspense } from "react";
 
 interface IParamsProps {
@@ -9,6 +10,10 @@ interface IParamsProps {
 const ProductsDetailsPage = async ({ params }: IParamsProps) => {
     const { id } = await params;
     const productDetails = await getProductDetails(id);
+    
+  if (!productDetails) {
+    notFound();
+  }
 
     return (
         <div>
