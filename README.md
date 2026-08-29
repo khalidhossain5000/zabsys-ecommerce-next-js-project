@@ -2,7 +2,7 @@
 
 A simple, clean, and responsive e-commerce frontend built with Next.js. Browse a list of products and view detailed information for each one.
 
-**Live Demo:** [https://zabsys-ecommerce-next-js-project.vercel.app/](https://zabsys-ecommerce-next-js-project.vercel.app/)
+**Live Url:** [https://zabsys-ecommerce-next-js-project.vercel.app/](https://zabsys-ecommerce-next-js-project.vercel.app/)
 
 ## Overview
 
