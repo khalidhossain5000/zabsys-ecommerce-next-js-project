@@ -37,3 +37,7 @@ export const getProductDetails = async (
 
   return result;
 };
+
+
+
+

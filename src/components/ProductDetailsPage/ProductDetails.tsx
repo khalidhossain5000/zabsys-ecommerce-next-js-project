@@ -8,7 +8,7 @@ interface IProductDetailsProps {
 }
 
 const ProductDetails = ({ product }: IProductDetailsProps) => {
-  const price = product.data?.price ?? product.data?.Price;
+  const price = product.data?.price ?? product.data?.Price;  //inconsistent price name hanlde over here
 
   const specs = product.data
     ? Object.entries(product.data).filter(
